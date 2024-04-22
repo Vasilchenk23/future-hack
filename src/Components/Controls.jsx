@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 const Controls = () =>{
     return(
         <>
-        <Link to="/controls">
             <div className="controls">
-                <div className="item-mouse">Mouse</div>
-                <div className="item-voice">Voice</div>
+                <Link to="/language-level"><div className="item-mouse">Mouse</div></Link>
+                <Link to="/language-level"><div className="item-voice">Voice</div></Link>
             </div>
-        </Link>
         </>
     );
 }
