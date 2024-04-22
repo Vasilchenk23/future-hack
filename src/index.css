@@ -11,3 +11,144 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+::-webkit-scrollbar {
+  width: 6px; 
+}
+
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 5px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* Main style */
+
+.topics {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  margin: auto;
+  align-items: center;
+  margin-top: 200px;
+  width: 600px;
+}
+
+.item {
+  width: 280px;
+  height: 215px;
+  background-color: #D9D9D9;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .topics {
+    flex-direction: column; 
+    align-items: stretch; 
+    width: auto;
+  }
+
+  .item {
+    width: auto;
+    margin-bottom: 10px;
+  }
+}
+
+/* Controls style */
+
+
+.controls{
+  display: flex;
+  justify-content: space-around;
+  width: 700px;
+  margin: 200px auto;
+}
+
+.item-voice,
+.item-mouse {
+  width: 300px;
+  height: 400px;
+  background-color: #D9D9D9;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+@media screen and (max-width: 600px) {
+  .controls {
+    flex-direction: column; 
+    align-items: stretch; 
+    width: auto;
+  }
+
+  .item-voice,
+  .item-voice {
+    width: auto;
+    margin-bottom: 10px;
+  }
+}
+
+/* LanguageLevel style */
+
+.languageLevel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.item-level-A1,
+.item-level-A2,
+.item-level-B1,
+.item-level-B2,
+.item-level-C1,
+.item-level-C2 {
+  width: 30%; 
+  height: 300px;
+  background-color: #D9D9D9;
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+@media screen and (max-width: 600px) {
+  .languageLevel {
+    flex-direction: column; 
+    align-items: stretch; 
+    width: auto;
+  }
+
+  .item-level-A1,
+  .item-level-A2,
+  .item-level-B1,
+  .item-level-B2,
+  .item-level-C1,
+  .item-level-C2 {
+    width: auto;
+    margin-bottom: 10px;
+  }
+}
+
