@@ -5,7 +5,7 @@ const LoginFlow = () => {
         <>
         <input type="text" placeholder="login"/>
         <input type="password" placeholder="password"/>
-        <Link to="/controls"><button>Send</button></Link>
+        <Link to="/main"><button>Send</button></Link>
         </>
     );
 }

@@ -1,20 +1,20 @@
 import { Link } from "react-router-dom";
 
-const Main = () => {
+const Lesson = () => {
     return(
         <>
         <div className="main">
             <div className="white-block">
                 <img className="eye-image" src="./img/eye.png" alt="eye" />
-                <h1 className="item-text-h1">Кажи англійською</h1>
+                <h1 className="item-text-h1">What hobbies do you have? Які в тебе хобі?</h1>
                 <img src="./img/logo.png" alt="logo" />
             </div>
             <div className="black-block">
-               <Link to="/level"> <button className="item-button">Увійти через Дію</button></Link>
+                <Link to="/finish"><img src="./img/microphone.png" alt="" /></Link>
             </div>
         </div>
         </>
     );
 }
 
-export default Main
+export default Lesson;
