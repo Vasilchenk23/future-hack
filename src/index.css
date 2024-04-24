@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: e-UrkaineHead-Regular;
+  src: url('./font/e-UkraineHead-Regular.ttf');
+}
+
 ::-webkit-scrollbar {
   width: 6px; 
 }
@@ -36,6 +41,7 @@ code {
 
 .main{
   display: flex;
+  font-family: e-UrkaineHead-Regular;
 }
 
 .white-block{
@@ -70,6 +76,7 @@ code {
   border-radius: 100px;
   font-size: 36px;
   border: none;
+  font-family: e-UrkaineHead-Regular;
 }
 
 @media only screen and (max-width: 768px) {
@@ -205,6 +212,7 @@ a {
 
 .item-div{
   margin-top: 80px;
+  font-family: e-UrkaineHead-Regular;
 }
 
 .black-block-goals > div {
@@ -272,6 +280,7 @@ a {
 .item-text-travel{
   width: 300px;
   text-align: center;
+  font-family: e-UrkaineHead-Regular;
 }
 
 .item-img{
