@@ -103,19 +103,14 @@ code {
     margin: 43px 0px 0px 255px;
   }
 
-  .black-block{
-    width: 100vw;
-    height: 66.99vh;
-    margin-top: -600px;
-  }
-
   .black-block-lesson{
-    width: 78.2vw;
-    height: 45vh;
-    margin-top: -500px;
+    width: 112vw;
+    height: 80vh;
+    margin-top: -280px;
     background-color: black;
-    padding: 100px 0px 0px 90px;
+    padding: 100px 0px 0px 130px;
   }
+  
 
 }
 
@@ -167,14 +162,22 @@ a {
   .black-block-level-english{
     background-color: rgb(0, 0, 0);
     padding-top: 10px;
-    width: 100vw;
-    height: 200vh;
-    margin-top: -500px;
+    width: 112vw;
+    height: 220vh;
+    margin-top: -300px;
+  }
+
+  .black-block{
+    background-color: rgb(0, 0, 0);
+    padding-top: 10px;
+    width: 112vw;
+    height: 70vh;
+    margin-top: -400px;
   }
 
   .item-block{
     margin-top: 100px;
-    margin-left: 5px;
+    margin-left: 25px;
     width: 98vw;
     padding: 20px 0px;
     height: 100px;
@@ -189,7 +192,8 @@ a {
     display: flex;
     justify-content: start;
     height: 100px;
-    margin: 0px 0px 0px -10px;
+    margin: 0px 0px 0px 30px;
+    font-size: 16px;
     align-items: center;
     width: 300px;
   }
@@ -232,17 +236,17 @@ a {
 @media only screen and (max-width: 768px) {
   .black-block-goals{
     background-color: rgb(0, 0, 0);
-    width: 100vw;
+    width: 112vw;
     height: 120vh;
-    margin-top: -550px;
+    margin-top: -300px;
   }
 
   .black-block-speak{
     background-color: rgb(0, 0, 0);
     height: 120vh;
     width: 100%;
-    padding: 0px 62px 470px;
-    margin-top: -550px;
+    padding: 0px 76px 870px;
+    margin-top: -390px;
   }
 
   .block-travel{
@@ -307,13 +311,13 @@ a {
 
 @media only screen and (max-width: 768px) {
   .modal {
-   margin: -500px 0px 0px -20px;
+   margin: -400px 0px 0px 10px;
    box-shadow: -100px 100px 100px 100px black;
    transform: translateY(-50%); 
    box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5); 
    position: relative; 
    z-index: 999; 
-   width: auto;
+   width: 380px;
    height: 500px;
   }
 
@@ -322,11 +326,11 @@ a {
     width: 360px;
   }
   .white-block{
-    width: auto;
+    width: 98vw;
     padding-left: 50px;
   }
   .color-options{
-    padding-left: 20px;
+    padding-left: 5px;
   }
 }
 
@@ -337,16 +341,7 @@ a {
   margin-top: 30px; 
 }
 
-.item-button-modal{
-  width: 100px;
-  height: 30px;
-  color: rgb(0, 0, 0);
-  background-color: #ffffff;
-  margin-top: 10px;
-  margin-left: 20px ;
-  border: none;
-  border-radius: 20px;
-}
+
 
 .color-options{
   width: 370px;

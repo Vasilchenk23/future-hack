@@ -37,37 +37,31 @@ const LanguageLevel = () => {
                 <div className="black-block-level-english">
                     <Link to="/goals">
                         <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }}>
-                            <p className="item-text" style={{ color: textColor, backgroundColor: backgroundColor }}>1</p>
                             <p className="item-text-level">Знаю що London is the capital of the Great Britan</p>
                         </div>
                     </Link>
                     <Link to="/goals">
                         <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }}>
-                            <p className="item-text" style={{ color: textColor, backgroundColor: backgroundColor }}>2</p>
                             <p className="item-text-level">Можу замовити каву. Але тільки small</p>
                         </div>
                     </Link>
                     <Link to="/goals">
                         <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }}>
-                            <p className="item-text" style={{ color: textColor, backgroundColor: backgroundColor }}>3</p>
                             <p className="item-text-level">Розповім як пройшов мій день, якщо він був good</p>
                         </div>
                     </Link>
                     <Link to="/goals">
                         <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }}>
-                            <p className="item-text" style={{ color: textColor, backgroundColor: backgroundColor }}>4</p>
                             <p className="item-text-level">Можу вести бесіду на різноманітні теми. Пишу твіти без помилок (майже)</p>
                         </div>
                     </Link>
                    <Link to="/goals">
                     <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }}>
-                            <p className="item-text" style={{ color: textColor, backgroundColor: backgroundColor }}>5</p>
                             <p className="item-text-level">Можу використовувати складну мову. Дивлюсь серіали без субтитрів</p>
                         </div>
                    </Link>
                     <Link to="/goals">
                         <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }}>
-                            <p className="item-text" style={{ color: textColor, backgroundColor: backgroundColor }}>6</p>
                             <p className="item-text-level">Розмовляю як носій. Dobry den, everybody</p>
                         </div>
                     </Link>
