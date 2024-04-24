@@ -50,6 +50,12 @@ code {
   padding-left: 70px;
 }
 
+.white-block-lesson{
+  width: 30%;
+  height: 100vh;
+  padding-left: 70px;
+}
+
 .eye-image{
   margin: 50px 0px;
 }
@@ -79,10 +85,22 @@ code {
   font-family: e-UrkaineHead-Regular;
 }
 
+.black-block-lesson{
+  width: 70%;
+  height: 99.9vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  z-index: 1;
+
+}
+
 @media only screen and (max-width: 768px) {
   .main {
     display: block;
     margin: 0;
+    width: 112vw;
   }
 
   .item-text-h1{
@@ -104,11 +122,11 @@ code {
   }
 
   .black-block-lesson{
+    background-color: rgb(0, 0, 0);
+    padding-top: 10px;
     width: 112vw;
-    height: 80vh;
-    margin-top: -280px;
-    background-color: black;
-    padding: 100px 0px 0px 130px;
+    height: 70vh;
+    margin-top: -30px;
   }
   
 
@@ -311,14 +329,13 @@ a {
 
 @media only screen and (max-width: 768px) {
   .modal {
-   margin: -400px 0px 0px 10px;
-   box-shadow: -100px 100px 100px 100px black;
-   transform: translateY(-50%); 
-   box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5); 
-   position: relative; 
-   z-index: 999; 
-   width: 380px;
-   height: 500px;
+    position: fixed; 
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999; 
+    width: 380px;
+    height: 500px;
   }
 
   .title-modal{
@@ -332,6 +349,10 @@ a {
   .color-options{
     padding-left: 5px;
   }
+  .white-block-lesson{
+    width: 98vw;
+    padding-left: 50px;
+  }
 }
 
 .block-modal{
@@ -340,8 +361,6 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
   margin-top: 30px; 
 }
-
-
 
 .color-options{
   width: 370px;

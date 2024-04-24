@@ -76,7 +76,6 @@ const combinedStyles = [
 
   return (
     <div className="modal">
-
       <div className='block-modal'>
         <div>
           <h3 className="color-options">Стилі:</h3>
