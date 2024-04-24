@@ -31,7 +31,7 @@ const LanguageLevel = () => {
             <div className="main" style={{ color: textColor, fontSize: `${fontSize}px`, backgroundColor: backgroundColor }}>
                 <div className="white-block">
                     <img onClick={openModal} className="eye-image" src="./img/eye.svg" alt="eye" />
-                    <h1 className="item-text-h1">Якій в тебе рівень англійської?</h1>
+                    <h1 className="item-text-h1-level">Якій в тебе рівень англійської?</h1>
                     <img src="./img/logo.svg" alt="logo" />
                 </div>
                 <div className="black-block-level-english">

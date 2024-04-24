@@ -34,7 +34,7 @@ const Lesson = () => {
                 <h1 className="item-text-h1">What hobbies do you have? Які в тебе хобі?</h1>
                 <img src="./img/logo.svg" alt="logo" />
             </div>
-            <div className="black-block">
+            <div className="black-block-lesson">
                 <Link to="/finish"><img src="./img/microphone.svg" alt="" /></Link>
             </div>
         </div>
