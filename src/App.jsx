@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginFlow/>} />
         <Route path="/main" element={<Main />} />
-        <Route path="/level" element={<LanguageLevel />} />
+        <Route path="/level"  element={<LanguageLevel />} />
         <Route path="/goals" element={<Goals />} />
         <Route path="/speaking" element={<Speaking />} />
         <Route path="/lesson" element={<Lesson />} />

@@ -41,7 +41,7 @@ code {
 .white-block{
   width: 30%;
   height: 100vh;
-  margin: 0px 0px 0px 50px;
+  padding-left: 70px;
 }
 
 .eye-image{
@@ -50,7 +50,8 @@ code {
 
 .item-text-h1{
   margin: 50px 0px 200px 0px;
-  width: 257px;
+  width: 237px;
+  z-index: 1;
 }
 
 .black-block{
@@ -60,6 +61,7 @@ code {
   display: flex;
   justify-content: center; 
   align-items: center;
+  z-index: 1;
 }
 
 .item-button{
@@ -73,12 +75,15 @@ code {
 @media only screen and (max-width: 768px) {
   .main {
     display: block;
+    margin: 0;
   }
 
   .item-text-h1{
-    display: flex;
-    justify-content: center;
-    width: 300px;
+    margin: -70px 0px 100px 0px;
+  }
+
+  .eye-image{
+    margin: 80px 0px 0px 240px;
   }
 
   .black-block{
@@ -134,13 +139,25 @@ a {
 @media only screen and (max-width: 768px) {
   .black-block-level-english{
     background-color: rgb(0, 0, 0);
-    width: 100vh;
+    padding-top: 10px;
+    width: 94vh;
+    height: 989px;
   }
 
   .item-block{
     margin-top: 50px;
+    margin-left: 10px;
     width: 840px;
     height: 100px;
+  }
+
+  .eye-image-level{
+    margin-left: 650px;
+    margin-top: 100px;
+  }
+
+  .item-text-h1-level{
+    margin: -60px 0px 100px 0px;
   }
 
 }
@@ -226,3 +243,77 @@ a {
   order: -1;
 }
 
+/* Modal style */
+
+.modal{
+  background-color: grey;
+  margin: -550px auto;
+  width: 450px;
+  height: 530px;
+  color: white;
+  z-index: 999;
+  position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal {
+   margin: -1600px 0px 0px -20px;
+   box-shadow: -100px 100px 100px 100px black;
+   transform: translateY(-50%); 
+   box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5); 
+   position: relative; 
+   z-index: 999; 
+   width: 100vh;
+   height: 500px;
+  }
+
+  .title-modal{
+    padding: 0px 0px 0px 25px;
+    width: 360px;
+  }
+  .white-block{
+    width: auto;
+    padding-left: 70px;
+  }
+  .color-options{
+    padding-left: 20px;
+  }
+}
+
+.block-modal{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 30px; 
+}
+
+.item-button-modal{
+  width: 100px;
+  height: 30px;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  margin-top: 10px;
+  margin-left: 20px ;
+  border: none;
+  border-radius: 20px;
+}
+
+.color-options{
+  width: 370px;
+  margin-left: 10px;
+}
+
+.title-modal{
+  margin: 0px 0px 0px 20px;
+}
+
+.color-option-button{
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.color-option-button:hover{
+  border: 2px solid rgb(0, 0, 0);
+  cursor: pointer;
+}
