@@ -96,6 +96,82 @@ code {
 
 }
 
+.item-header-block{
+  display: flex;
+  justify-content: space-between;
+  width: 340px;
+}
+
+.arrow-left{
+  position: relative;
+  top: 45px;
+  right: 20px;
+}
+
+.arrow-left-goal{
+  position: relative;
+  top: 45px;
+  right: 20px;
+}
+
+.arrow-left-speak{
+  position: relative;
+  top: 45px;
+  right: 20px;
+}
+
+.arrow-left-lesson{
+  position: relative;
+  top: 45px;
+  right: 20px;
+}
+
+.arrow-left-finish{
+  position: relative;
+  top: 45px;
+  right: 20px;
+}
+
+.item-text-h1-level{
+  margin-top: 200px;
+}
+
+.item-text-h1-goals{
+  margin-top: 200px;
+}
+
+.item-text-h1-speak{
+  margin-top: 200px;
+}
+
+.item-text-h1-lesson{
+  margin-top: 200px;
+}
+.item-text-h1-finish{
+  margin-top: 200px;
+}
+
+.logo{
+  margin-top: 100px;
+}
+.logo-goal{
+  margin-top: 100px;
+}
+.logo-level{
+  margin-top: 100px;
+}
+.logo-speak{
+  margin-top: 100px;
+}
+
+.logo-lesson{
+  margin-top: 100px;
+}
+
+.logo-finish{
+  margin-top: 100px;
+}
+
 @media only screen and (max-width: 768px) {
   .main {
     display: block;
@@ -104,29 +180,115 @@ code {
   }
 
   .item-text-h1{
-    margin: -80px 0px 10px 10px;
+    margin: 170px 0px 0px -20px;
+    width: 350px;
+  }
+
+  .logo{
+    margin: -300px 0px 120px 0px;
+  }
+
+  .logo-goal{
+    margin: -70px 0px 240px 0px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-level{
+    margin: -240px 0px 280px -15px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-speak{
+    margin: -210px 0px 280px 0px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-lesson{
+    margin: -240px 0px 280px 0px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-finish{
+    margin: -220px 0px 280px 0px;
+    width: 50px;
+    height: 50px;
   }
 
   .item-text-h1-goals{
-    margin: -80px 0px 50px 10px;
-    width: 100px;
+    margin: 90px 0px -120px 10px;
+    width: 200px;
+    font-size: 14px;
   }
 
   .item-text-h1-level{
-    margin: -80px 0px 50px 10px;
+    margin: 90px 0px 50px -20px;
     width: 250px;
+    font-size: 16px;
   }
+
+  .item-text-h1-speak{
+    margin: 90px 0px 50px 0px;
+    width: 250px;
+    font-size: 16px;
+  }
+
+  .item-text-h1-lesson{
+    margin: 100px 0px 50px 0px;
+    width: 250px;
+    font-size: 16px;
+  }
+
+  .item-text-h1-finish{
+    margin: 100px 0px 50px 0px;
+    width: 250px;
+    font-size: 16px;
+  }
+
 
   .eye-image{
     margin: 43px 0px 0px 255px;
   }
 
+  .arrow-left{
+    position: relative;
+    top: 100px;
+    right: 340px;
+  }
+
+  .arrow-left-goal{
+    position: relative;
+    top: 100px;
+    right: 320px;
+  }
+
+  .arrow-left-speak{
+    position: relative;
+    top: 100px;
+    right: 320px;
+  }
+
+  .arrow-left-lesson{
+    position: relative;
+    top: 100px;
+    right: 320px;
+  }
+
+  .arrow-left-finish{
+    position: relative;
+    top: 100px;
+    right: 320px;
+  }
+
   .black-block-lesson{
     background-color: rgb(0, 0, 0);
     padding-top: 10px;
-    width: 112vw;
-    height: 70vh;
-    margin-top: -30px;
+    width: 121vw;
+    height: 83vh;
+    margin-top: -420px;
   }
   
 
@@ -180,25 +342,25 @@ a {
   .black-block-level-english{
     background-color: rgb(0, 0, 0);
     padding-top: 10px;
-    width: 112vw;
-    height: 220vh;
-    margin-top: -300px;
+    width: 121vw;
+    height: 74vh;
+    margin-top: -430px;
   }
 
   .black-block{
     background-color: rgb(0, 0, 0);
     padding-top: 10px;
-    width: 112vw;
-    height: 70vh;
-    margin-top: -400px;
+    width: 121vw;
+    height: 65vh;
+    margin-top: -350px;
   }
 
   .item-block{
-    margin-top: 100px;
-    margin-left: 25px;
+    margin-top: 20px;
+    margin-left: 40px;
     width: 98vw;
-    padding: 20px 0px;
-    height: 100px;
+    padding: 00px 0px;
+    height: 50px;
   }
 
   .eye-image-level{
@@ -209,9 +371,9 @@ a {
   .item-text-level{
     display: flex;
     justify-content: start;
-    height: 100px;
+    height: 50px;
     margin: 0px 0px 0px 30px;
-    font-size: 16px;
+    font-size: 12px;
     align-items: center;
     width: 300px;
   }
@@ -225,52 +387,61 @@ a {
   width: 70%;
   height: 100vh;
   background-color: rgb(0, 0, 0);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.black-block-goals {
-  display: flex;
-  flex-wrap: wrap; 
-}
 
 .item-div{
-  margin-top: 80px;
+  text-align: center;
+  width: 360px;
+  height: 200px;
+  margin: 10px 0px 0px 80px;
+  background-color: #ffffff;
   font-family: e-UrkaineHead-Regular;
+  border-radius: 20px;
 }
 
-.black-block-goals > div {
-  flex: 1 0 50%; 
-  text-align: center; 
-  color: white;
-}
-
-.black-block-goals > div:nth-child(-n + 2) {
-  order: -1;
-}
-
-.black-block-goals > div:nth-last-child(-n + 2) {
-  order: 2;
-}
 
 @media only screen and (max-width: 768px) {
   .black-block-goals{
     background-color: rgb(0, 0, 0);
-    width: 112vw;
-    height: 120vh;
-    margin-top: -300px;
+    width: 121vw;
+    height: 74vh;
+    margin-top: -430px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .item-div{
+    text-align: center;
+    width: 260px;
+    height: 64px;
+    margin: 10px 0px 0px 80px;
+    background-color: #ffffff;
+    color: black;
+    padding: 1px 0px 0px 0px;
+    font-family: e-UrkaineHead-Regular;
+  }
+
+  .item-div img {
+    display: none;
   }
 
   .black-block-speak{
     background-color: rgb(0, 0, 0);
-    height: 120vh;
+    height: 40vh;
     width: 100%;
     padding: 0px 76px 870px;
-    margin-top: -390px;
+    margin-top: -450px;
   }
 
   .block-travel{
-    margin: 0px 0px 0px -115px;
+    margin: 0px 0px 0px -115px;    
   }
-  
+
+  .block-travel img {
+    display: none;
+  }
 
 }
 
@@ -292,8 +463,10 @@ a {
 
 .block{
   margin-left: 100px;
+  margin-top: 20px;
   width: 320px;
-  height: 320px;
+  height: 230px;
+  padding: 50px 0px;
   border-radius: 100px;
   background-color: white;
   color: black;
@@ -308,11 +481,6 @@ a {
 .item-img{
   display: flex;
   margin: 0 auto;
-}
-
-.block-travel:nth-child(-n + 2),
-.block-travel:nth-last-child(-n + 2) {
-  order: -1;
 }
 
 /* Modal style */
@@ -343,14 +511,14 @@ a {
     width: 360px;
   }
   .white-block{
-    width: 98vw;
+    width: 107vw;
     padding-left: 50px;
   }
   .color-options{
     padding-left: 5px;
   }
   .white-block-lesson{
-    width: 98vw;
+    width: 107vw;
     padding-left: 50px;
   }
 }

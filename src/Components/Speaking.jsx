@@ -30,15 +30,17 @@ const Speaking = () => {
         <>
         <div className="main" style={{ color: textColor, fontSize: `${fontSize}px` }}>
             <div className="white-block">
-                <img onClick={openModal} className="eye-image" src="./img/eye.svg" alt="eye" />
-                <h1 className="item-text-h1">Кажи англійською</h1>
-                <img src="./img/logo.svg" alt="logo" />
+                <div className="item-header-block">
+                    <img onClick={openModal} className="eye-image" src="./img/eye.svg" alt="eye" />
+                   <Link to="/goals"><img className="arrow-left-speak" src="./img/arrow-left.svg" alt="arrow-left-speak" /></Link>
+                </div>
+                <h1 className="item-text-h1-speak">Про що поговоримо?</h1>
+                <img className="logo-speak" src="./img/logo.svg" alt="logo-speak" />
             </div>
             <div className="black-block-speak">
                     <Link to="/lesson">
                         <div className="block-travel">
                             <div className="block" style={{ color: textColor, backgroundColor: backgroundColor }}>
-                                <p className="item-text-travel">1</p>
                                 <img className="item-img" src="./img/cloud.svg" alt="cloud"/>
                                 <p className="item-text-travel">Weather / Погода</p>
                             </div>
@@ -47,7 +49,6 @@ const Speaking = () => {
                     <Link to="/lesson">
                         <div className="block-travel">
                         <div className="block" style={{ color: textColor, backgroundColor: backgroundColor }}>
-                                <p className="item-text-travel">2</p>
                                 <img className="item-img" src="./img/pizza.svg" alt="pizza"/>
                                 <p className="item-text-travel">Food / Їжа</p>
                         </div>
@@ -56,7 +57,6 @@ const Speaking = () => {
                     <Link to="/lesson">
                         <div className="block-travel">
                             <div className="block" style={{ color: textColor, backgroundColor: backgroundColor }}>
-                                <p className="item-text-travel">3</p>
                                 <img className="item-img" src="./img/airplane.svg" alt="airplane"/>
                                 <p className="item-text-travel">Travel / Подорожі</p>
                             </div>
@@ -65,7 +65,6 @@ const Speaking = () => {
                     <Link to="/lesson">
                         <div className="block-travel">
                             <div className="block" style={{ color: textColor, backgroundColor: backgroundColor }}>
-                                <p className="item-text-travel">4</p>
                                 <img className="item-img" src="./img/bowling.svg" alt="bowling"/>
                                 <p className="item-text-travel">Weather / Погода</p>
                             </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Modal from "./Modal";
+import { Link } from "react-router-dom";
 
 const Finish = () => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -29,9 +30,12 @@ const Finish = () => {
         <>
         <div className="main" style={{ color: textColor, fontSize: `${fontSize}px` }}>
             <div className="white-block">
-                <img onClick={openModal} className="eye-image" src="./img/eye.svg" alt="eye" />
-                <h1 className="item-text-h1">Поговоримо ще?</h1>
-                <img src="./img/logo.svg" alt="logo" />
+                <div className="item-header-block">
+                        <img onClick={openModal} className="eye-image" src="./img/eye.svg" alt="eye" />
+                        <Link to="/lesson"><img className="arrow-left-finish" src="./img/arrow-left.svg" alt="arrow-left-finish" /></Link>
+                </div>
+                <h1 className="item-text-h1-finish">Поговоримо ще?</h1>
+                <img className="logo-finish" src="./img/logo.svg" alt="logo" />
             </div>
             <div className="black-block"></div>
         </div>

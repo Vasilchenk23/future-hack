@@ -35,7 +35,7 @@ const Main = () => {
         <div className="white-block" style={{ backgroundColor: '#ffffff' }}>
           <img onClick={openModal} className="eye-image" src="./img/eye.svg" alt="eye" />
           <h1 className="item-text-h1">Кажи англійською</h1>
-          <img src="./img/logo.svg" alt="logo" />
+          <img className="logo" src="./img/logo.svg" alt="logo" />
         </div>
         <div className="black-block" style={{ backgroundColor: '#000000' }}>
           <Link to="/level">
