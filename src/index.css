@@ -470,6 +470,7 @@ a {
 
 .item-div{
   text-align: center;
+  padding-top: 10px;
   width: 360px;
   height: 200px;
   margin: 10px 0px 0px 80px;
@@ -563,7 +564,7 @@ a {
 
 .modal{
   background-color: grey;
-  margin: -550px auto;
+  margin: -590px auto;
   width: 450px;
   height: 530px;
   color: white;
