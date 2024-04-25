@@ -7,6 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --text-color: #000000; /* устанавливаем цвет текста по умолчанию */
+}
+
+.item-div svg {
+  fill: var(--text-color);
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

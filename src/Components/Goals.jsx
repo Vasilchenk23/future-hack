@@ -40,7 +40,7 @@ const Goals = () => {
             <div className="black-block-goals">
                   <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/speaking" >
                     <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }}>
-                      <img src="./img/plane.svg" alt="" />
+                      <img style={{ fill: "currentColor", backgroundColor: backgroundColor }} src="./img/plane.svg" alt="" />
                       <h3>Хочу подорожувати</h3>
                     </div>
                   </Link>
