@@ -43,7 +43,9 @@ const Lesson = () => {
               <img className="logo-lesson" src="./img/logo.svg" alt="logo" />
           </div>
           <div className="black-block-lesson" style={{ color: textColor, backgroundColor: backgroundColor1 }}>
-              <Link to="/finish"><img src="./img/microphone.svg" alt="" /></Link>
+              <Link to="/finish">
+                  <img src="./img/microphone.svg" alt="" />
+              </Link>
           </div>
       </div>
       <div className="app" style={{ color: textColor, backgroundColor: backgroundColor }}>
