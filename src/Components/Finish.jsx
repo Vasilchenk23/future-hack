@@ -52,12 +52,17 @@ const Finish = () => {
             <div className="black-block-finish" style={{backgroundColor: textColor}}>
               <Link to="/speaking">
                   <div className="true-block">
-                    <p className="item-true-block" style={{backgroundColor: backgroundColor, color: textColor}}>Так! Давай оберемо наступну тему</p>
+                    <p className="item-true-block" style={{backgroundColor: backgroundColor, color: textColor}}>
+                    <p className="p-number" style={{ color: backgroundColor, backgroundColor: textColor, display:'flex', width:'50px', height:'50px', textAlign:'center', justifyContent:'center', alignItems:'center', borderRadius:'30px', margin:"0px 10px"   }}>1</p>
+                      Так! Давай оберемо наступну тему
+                      </p>
                   </div>
               </Link>
               <Link to="/main">
-                  <div className="false-block">
-                    <p className="item-false-block" style={{backgroundColor: textColor, color: backgroundColor}}>Поки все, але ще поговоримо</p>
+                  <div className="false-block" style={{ border: `4px solid ${backgroundColor}`, width:'680px', height:'100px', display:'flex', justifyContent:'center', alignItems:'center', textAlign:'center', borderRadius:'50px', margin:'0 auto'}}>
+                    <p className="item-false-block" style={{backgroundColor: textColor, color: backgroundColor}}>
+                    <p className="p-number" style={{ color: textColor, backgroundColor: backgroundColor, display:'flex', width:'50px', height:'50px', textAlign:'center', justifyContent:'center', alignItems:'center', borderRadius:'30px', margin:"0px 10px 0px -30px"   }}>2</p>
+                      Поки все, але ще поговоримо</p>
                   </div>
               </Link>
             </div>

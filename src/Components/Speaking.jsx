@@ -86,6 +86,7 @@ const Speaking = () => {
                     style={{ width: "100px", height: "100px", color: textColor, fill:"currentColor" }}
                   />
                   <p className="item-text-travel">{icon.title}</p>
+                  <p className="p-page"  style={{ color: backgroundColor, backgroundColor: textColor, display:'flex', width:'50px', height:'50px', textAlign:'center', justifyContent:'center', alignItems:'center', borderRadius:'30px', margin:"0px 0px 70px 130px"   }}>1</p>
                 </div>
               </div>
             </Link>

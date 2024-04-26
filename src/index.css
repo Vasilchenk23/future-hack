@@ -225,7 +225,7 @@ code {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 50px;
 }
 
 .item-false-block{
@@ -233,8 +233,7 @@ code {
   height: 100px;
   background-color: rgb(0, 0, 0);
   color: white;
-  border: 4px solid rgb(255, 255, 255);
-  border-radius: 20px;
+  border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -384,6 +383,7 @@ a {
 .item-block{
   display: flex;
   justify-content: start;
+  padding: 0px 0px 0px 10px;
   text-align: center;
   width: 900px;
   height: 80px;
@@ -471,6 +471,22 @@ a {
     width: 300px;
   }
 
+  .p-number{
+    width: 70px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+  }
+
+  .p-number-4{
+    width: 70px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+  }
+
 }
 
 
@@ -508,6 +524,10 @@ a {
     height: 74vh;
     margin-top: -430px;
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .p-page{
+    display: none;
   }
 
   .item-div{
