@@ -63,7 +63,7 @@ const Speaking = () => {
             </svg>
             <Link to="/goals" style={{ color: textColor }}>
               <svg  xmlns="http://www.w3.org/2000/svg"  width="70"  height="70"  viewBox="0 0 24 24"  fill="currentColor"  stroke="currentColor"  strokeWidth="2"  
-              strokeLinecap="round"  stroke-linejoin="round" className="arrow-left-speak">
+              strokeLinecap="round"  strokestrokeLinejoinLinejoin="round" className="arrow-left-speak">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
             </Link>
           </div>
@@ -82,7 +82,7 @@ const Speaking = () => {
                   <img
                     className="item-img"
                     src={icon.url}
-                    alt={icon.title}
+                    alt={`Тема ${icon.title}`}
                     style={{ width: "100px", height: "100px", color: textColor, fill:"currentColor" }}
                   />
                   <p className="item-text-travel">{icon.title}</p>

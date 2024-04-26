@@ -1,9 +1,14 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Modal from "./Modal";
+import VoiceRecognitionAnimation from "./VoiceRecognitionAnimation";
 
 const Lesson = () => {
+  const [isRecording, setIsRecording] = useState(false);
+  const mediaRecorder = useRef(null);
+  const audioChunks = useRef([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [textColor, setTextColor] = useState('#000000');
   const [backgroundColor, setBackgroundColor] = useState('#ffffff'); 
@@ -30,7 +35,40 @@ const Lesson = () => {
       block.style.backgroundColor = changes.backgroundColor;
     });
   };
-  
+
+  const startRecording = () => {
+    setIsRecording(true);
+    navigator.mediaDevices.getUserMedia({ audio: true })
+      .then(stream => {
+        mediaRecorder.current = new MediaRecorder(stream);
+        mediaRecorder.current.ondataavailable = event => {
+          audioChunks.current.push(event.data);
+        };
+        mediaRecorder.current.start();
+      })
+      .catch(error => console.error('Error accessing media devices.', error));
+  };
+
+  const stopRecording = () => {
+    setIsRecording(false);
+    mediaRecorder.current.stop();
+  };
+
+  useEffect(() => {
+    if (!isRecording && audioChunks.current.length > 0) {
+      const audioBlob = new Blob(audioChunks.current, { type: 'audio/mpeg-3' });
+      const audioUrl = URL.createObjectURL(audioBlob);
+      const link = document.createElement('a');
+      link.href = audioUrl;
+      link.download = 'recorded_audio.mp3';
+      document.body.appendChild(link);
+      link.click();
+      URL.revokeObjectURL(audioUrl);
+      audioChunks.current = [];
+    }
+  }, [isRecording]);
+
+ 
   return (
     <>
       <div className="main" style={{ color: textColor, backgroundColor: backgroundColor }}>
@@ -42,7 +80,7 @@ const Lesson = () => {
                  </svg>
                  <Link to="/speaking">
                   <svg  xmlns="http://www.w3.org/2000/svg"  width="70"  height="70"  viewBox="0 0 24 24"  fill="currentColor"  stroke="currentColor"  strokeWidth="2"  
-                      strokeLinecap="round"  stroke-linejoin="round" className="arrow-left-lesson">
+                      strokeLinecap="round"  strokestrokeLinejoinLinejoin="round" className="arrow-left-lesson">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" />
                   </svg>
                   </Link>
@@ -55,8 +93,8 @@ const Lesson = () => {
               </svg>
           </div>
           <div className="black-block-lesson" style={{ color: textColor, backgroundColor: textColor }}>
-              <Link to="/finish">
-              <svg width="240px" height="240px" viewBox="-5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              {/* <Link to="/finish"> */}
+              <svg onClick={isRecording ? stopRecording : startRecording} width="240px" height="240px" viewBox="-5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
                   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <g id="Icon-Set" transform="translate(-105.000000, -307.000000)" style={{ fill: backgroundColor}} fill="currentColor">
                           <path d="M111,314 C111,311.238 113.239,309 116,309 C118.761,309 121,311.238 121,314 L121,324 C121,326.762 118.761,329 116,329 C113.239,329 111,326.762 111,324 L111,314 L111,314 Z M116,331 C119.866,331 123,327.866 123,324 L123,314 C123,310.134 119.866,307 116,307 C112.134,307 109,310.134 109,314 L109,324 C109,327.866 112.134,331 116,331 L116,331 Z M127,326 L125,326 C124.089,330.007 120.282,333 116,333 C111.718,333 107.911,330.007 107,326 L105,326 C105.883,330.799 110.063,334.51 115,334.955 L115,337 L114,337 C113.448,337 113,337.448 113,338 C113,338.553 113.448,339 114,339 L118,339 C118.552,339 119,338.553 119,338 C119,337.448 118.552,337 118,337 L117,337 L117,334.955 C121.937,334.51 126.117,330.799 127,326 L127,326 Z" id="microphone">
@@ -65,7 +103,10 @@ const Lesson = () => {
                       </g>
                   </g>
               </svg>
-              </Link>
+              <VoiceRecognitionAnimation />
+              {isRecording}
+              {/* </Link> */}
+              <Link to="/finish" style={{color: "green"}}>gg</Link>
           </div>
       </div>
       <div className="app" style={{ color: textColor, backgroundColor: backgroundColor }}>

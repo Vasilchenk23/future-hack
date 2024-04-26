@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Modal from "./Modal";
+import axios from 'axios';
+
 
 const Goals = () => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -26,6 +28,15 @@ const Goals = () => {
         block.style.backgroundColor = changes.backgroundColor;
       });
     };
+
+    const handleSubmit = async () => {
+      try {
+        await axios.post('https://back-opencv-nodejs-production.up.railway.app/api/send-email');
+        alert('Електронний лист успішно відправлено! 😊');
+      } catch (error) {
+        alert('Не вдалося відправити лист. Будь ласка, спробуйте знову. 😞');
+      }
+    };
     return(
         <>
         <div className="main" style={{  color: textColor, fontSize: `${fontSize}px` }}>
@@ -37,12 +48,12 @@ const Goals = () => {
                   </svg>
                   <Link to="/level">
                     <svg  xmlns="http://www.w3.org/2000/svg"  width="70"  height="70"  viewBox="0 0 24 24"  fill="currentColor"  stroke="currentColor"  strokeWidth="2"  
-                        strokeLinecap="round"  stroke-linejoin="round" className="arrow-left-goal">
+                        strokeLinecap="round"  strokestrokeLinejoinLinejoin="round" className="arrow-left-goal">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" />
                     </svg>
                     </Link>
                 </div>
-                <h1 className="item-text-h1-goals" >Для чого ти вивчаєш англійську?</h1>
+                <h1 className="item-text-h1-goals" onClick={handleSubmit} >Для чого ти вивчаєш англійську?</h1>
                 <svg className="logo-goal" width="160" height="160" viewBox="0 0 160 160" stroke="currentColor" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 26.6667C0 11.9391 11.9391 0 26.6667 0H133.333C148.061 0 160 11.9391 160 26.6667V133.333C160 148.061 148.061 160 133.333 160H26.6667C11.9391 160 0 148.061 0 133.333V26.6667Z" />
                   <path d="M59.5417 94.1632H60.8733V101.333H56.8785C52.3715 101.333 49.8108 98.875 49.8108 94.2656V85.0469H35.9826V101.333H28.0955V62.4097H35.9826V78.0816H42.6406L52.0642 62.4097H60.7708L50.6302 78.0816H57.6979V92.3194C57.6979 93.4462 58.4149 94.1632 59.5417 94.1632Z" style={{ fill: backgroundColor}}/>
@@ -56,7 +67,7 @@ const Goals = () => {
                       <title>plane-solid</title>
                       <path class="clr-i-solid clr-i-solid-path-1" d="M6.25,11.5,12,13.16l6.32-4.59-9.07.26A.52.52,0,0,0,9,8.91L6.13,10.56A.51.51,0,0,0,6.25,11.5Z"></path><path class="clr-i-solid clr-i-solid-path-2" d="M34.52,6.36,28.22,5a3.78,3.78,0,0,0-3.07.67L6.12,19.5l-4.57-.2a1.25,1.25,0,0,0-.83,2.22l4.45,3.53a.55.55,0,0,0,.53.09c1.27-.49,6-3,11.59-6.07l1.12,11.51a.55.55,0,0,0,.9.37l2.5-2.08a.76.76,0,0,0,.26-.45l2.37-13.29c4-2.22,7.82-4.37,10.51-5.89A1.55,1.55,0,0,0,34.52,6.36Z"></path>
                       <rect x="0" y="0" width="36" height="36" fill-opacity="0"/>
-                  </svg>
+                    </svg>
                       <h3>Хочу подорожувати</h3>
                     </div>
                   </Link>

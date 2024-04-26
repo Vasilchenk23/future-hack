@@ -26,6 +26,16 @@ code {
   src: url('./font/e-UkraineHead-Regular.ttf');
 }
 
+@keyframes voice {
+  0%,
+  100% {
+    height: 10px;
+  }
+  50% {
+    height: 35px;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 6px; 
 }
@@ -70,7 +80,7 @@ code {
 }
 
 .item-text-h1{
-  margin: 50px 0px 200px 0px;
+  margin: 50px 0px 0px 0px;
   width: 237px;
   z-index: 1;
 }
@@ -104,7 +114,7 @@ code {
 
 .black-block-lesson{
   width: 70%;
-  height: 99.9vh;
+  height: 100vh;
   background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: center; 
@@ -116,77 +126,79 @@ code {
 .item-header-block{
   display: flex;
   justify-content: space-between;
-  width: 340px;
+  width: 380px;
 }
 
 .arrow-left{
   position: relative;
-  top: 45px;
+  top: 43px;
   right: 20px;
 }
 
 .arrow-left-goal{
   position: relative;
-  top: 45px;
+  top: 43px;
   right: 20px;
 }
 
 .arrow-left-speak{
   position: relative;
-  top: 45px;
+  top: 43px;
   right: 20px;
 }
 
 .arrow-left-lesson{
   position: relative;
-  top: 45px;
+  top: 43px;
   right: 20px;
 }
 
 .arrow-left-finish{
   position: relative;
-  top: 45px;
+  top: 43px;
   right: 20px;
 }
 
 .item-text-h1-level{
-  margin-top: 200px;
+  margin-top: 50px;
 }
 
 .item-text-h1-goals{
-  margin-top: 200px;
+  margin-top: 50px;
 }
 
 .item-text-h1-speak{
-  margin-top: 200px;
+  margin-top: 50px;
+  width: 150px;
 }
 
 .item-text-h1-lesson{
-  margin-top: 200px;
+  margin-top: 50px;
 }
 .item-text-h1-finish{
-  margin-top: 200px;
+  margin-top: 50px;
+  width: 100px;
 }
 
 .logo{
-  margin-top: 100px;
+  margin-top: 70px;
 }
 .logo-goal{
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .logo-level{
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .logo-speak{
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .logo-lesson{
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .logo-finish{
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .frame{
@@ -251,37 +263,37 @@ code {
   }
 
   .logo-goal{
-    margin: -70px 0px 240px 0px;
+    margin: -58px 0px 240px -15px;
     width: 50px;
     height: 50px;
   }
 
   .logo-level{
-    margin: -240px 0px 280px -15px;
+    margin: -232px 0px 240px -15px;
     width: 50px;
     height: 50px;
   }
 
   .logo-speak{
-    margin: -210px 0px 280px 0px;
+    margin: -208px 0px 280px -15px;
     width: 50px;
     height: 50px;
   }
 
   .logo-lesson{
-    margin: -240px 0px 280px 0px;
+    margin: -240px 0px 280px -15px;
     width: 50px;
     height: 50px;
   }
 
   .logo-finish{
-    margin: -220px 0px 280px 0px;
+    margin: -220px 0px 280px -15px;
     width: 50px;
     height: 50px;
   }
 
   .item-text-h1-goals{
-    margin: 90px 0px -120px 10px;
+    margin: 90px 0px -120px -20px;
     width: 200px;
     font-size: 14px;
   }
@@ -293,19 +305,19 @@ code {
   }
 
   .item-text-h1-speak{
-    margin: 90px 0px 50px 0px;
+    margin: 90px 0px 50px -20px;
     width: 250px;
     font-size: 16px;
   }
 
   .item-text-h1-lesson{
-    margin: 100px 0px 50px 0px;
+    margin: 100px 0px 50px -20px;
     width: 250px;
     font-size: 16px;
   }
 
   .item-text-h1-finish{
-    margin: 100px 0px 50px 0px;
+    margin: 100px 0px 50px -20px;
     width: 250px;
     font-size: 16px;
   }
@@ -318,31 +330,31 @@ code {
   .arrow-left{
     position: relative;
     top: 100px;
-    right: 340px;
+    right: 335px;
   }
 
   .arrow-left-goal{
     position: relative;
     top: 100px;
-    right: 320px;
+    right: 336px;
   }
 
   .arrow-left-speak{
     position: relative;
     top: 100px;
-    right: 320px;
+    right: 336px;
   }
 
   .arrow-left-lesson{
     position: relative;
     top: 100px;
-    right: 320px;
+    right: 336px;
   }
 
   .arrow-left-finish{
     position: relative;
     top: 100px;
-    right: 320px;
+    right: 336px;
   }
 
   .black-block-lesson{
@@ -377,7 +389,6 @@ a {
   height: 80px;
   background-color: rgb(255, 255, 255);
   margin-top: 20px;
-  margin-left: 50px;
   border-radius: 100px;
 }
 
@@ -385,6 +396,10 @@ a {
   width: 70%;
   height: 100vh;
   background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .item-text{
@@ -404,6 +419,9 @@ a {
 .item-text-level{
   font-size: 24px;
   margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -433,7 +451,6 @@ a {
 
   .item-block{
     margin-top: 20px;
-    margin-left: 40px;
     width: 98vw;
     padding: 00px 0px;
     height: 50px;
@@ -459,20 +476,24 @@ a {
 
 /* Goals style */
 
-.black-block-goals{
+.black-block-goals {
   width: 70%;
   height: 100vh;
   background-color: rgb(0, 0, 0);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin: auto; 
+  align-items: center; 
+  justify-content: center; 
 }
+
 
 
 .item-div{
   text-align: center;
   padding-top: 10px;
   width: 360px;
-  height: 200px;
+  height: 170px;
   margin: 10px 0px 0px 80px;
   background-color: #ffffff;
   font-family: e-UrkaineHead-Regular;
@@ -491,6 +512,9 @@ a {
 
   .item-div{
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 260px;
     height: 64px;
     margin: 10px 0px 0px 80px;
@@ -500,16 +524,15 @@ a {
     font-family: e-UrkaineHead-Regular;
   }
 
-  .item-div img {
+  .item-div svg {
     display: none;
   }
 
   .black-block-speak{
     background-color: rgb(0, 0, 0);
-    height: 40vh;
     width: 100%;
-    padding: 0px 76px 870px;
-    margin-top: -450px;
+    padding: 0px 76px 0px;
+    margin-top: -400px;
   }
 
   .block-travel{
@@ -542,7 +565,7 @@ a {
   margin-left: 100px;
   margin-top: 20px;
   width: 320px;
-  height: 230px;
+  height: 180px;
   padding: 50px 0px;
   border-radius: 100px;
   background-color: white;
@@ -561,26 +584,31 @@ a {
 }
 
 /* Modal style */
-
-.modal{
-  background-color: grey;
-  margin: -590px auto;
-  width: 450px;
-  height: 530px;
+.modal {
+  background-color: #4c4a4a;
+  width: 500px;
+  height: 510px;
+  border-radius: 15px;
   color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 999;
-  position: relative;
 }
 
 @media only screen and (max-width: 768px) {
   .modal {
-    position: fixed; 
-    top: 120%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999; 
     width: 380px;
-    height: 500px;
+    height: 509px;
+  }
+
+  .block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 10px;
   }
 
   .title-modal{
@@ -604,11 +632,11 @@ a {
   display: flex;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.5);
-  margin-top: 30px; 
+  border-radius: 15px;
 }
 
 .color-options{
-  width: 370px;
+  width: 300px;
   margin-left: 10px;
 }
 
