@@ -61,7 +61,7 @@ const Goals = () => {
                 </svg>
             </div>
             <div className="black-block-goals" style={{ backgroundColor: textColor}}>
-                  <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/speaking" >
+                  <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/lesson" >
                     <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }}>
                     <svg style={{ fill: textColor}} fill="currentColor" stoke="currentColor" width="100px" height="100px" viewBox="0 0 36 36" version="1.1"  preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
                       <title>plane-solid</title>
@@ -72,7 +72,7 @@ const Goals = () => {
                       <h3>Хочу подорожувати</h3>
                     </div>
                   </Link>
-                  <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/speaking">
+                  <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/lesson">
                     <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }}>
                     <svg  style={{ fill: textColor}} fill="currentColor" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
                       width="100px" height="100px" viewBox="0 0 256 246" enable-background="new 0 0 256 246">
@@ -93,7 +93,7 @@ const Goals = () => {
                       <h3>Розвиваю кар’єру</h3>
                     </div>
                   </Link>
-                    <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/speaking">
+                    <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/lesson">
                     <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }}>
                     <svg height="100px" width="100px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" style={{ fill: textColor}}  fill="currentColor"
                           viewBox="0 0 512 512">
@@ -143,7 +143,7 @@ const Goals = () => {
                       <h3>Саморозвиваюся</h3>
                     </div>
                     </Link>
-                    <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/speaking">
+                    <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/lesson">
                     <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }}>
                         <svg fill="currentColor" style={{ fill: textColor }} width="100px" height="100px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.73,16.663A3.467,3.467,0,0,0,20.5,14.5a3.5,3.5,0,0,0-7,0,3.467,3.467,0,0,0,.77,2.163A6.04,6.04,0,0,0,12,18.69a6.04,6.04,0,0,0-2.27-2.027A3.467,3.467,0,0,0,10.5,14.5a3.5,3.5,0,0,0-7,0,3.467,3.467,0,0,0,.77,2.163A6,6,0,0,0,1,22a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1A6,6,0,0,0,19.73,16.663ZM7,13a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,7,13ZM3.126,21a4,4,0,0,1,7.748,0ZM17,13a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,17,13Zm-3.874,8a4,4,0,0,1,7.748,0ZM6,2V8A1,1,0,0,0,7,9H9.865l1.367,1.641a1,1,0,0,0,1.536,0L14.135,9H17a1,1,0,0,0,1-1V2a1,1,0,0,0-1-1H7A1,1,0,0,0,6,2ZM8,3h8V7H13.667a1,1,0,0,0-.769.359L12,8.438l-.9-1.079A1,1,0,0,0,10.333,7H8Z"/></svg>
@@ -151,7 +151,7 @@ const Goals = () => {
                       <h3>Хочу спілкуватися з усім світом</h3>
                     </div>
                     </Link>
-                    <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/speaking">
+                    <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/lesson">
                     <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }}>
                     <svg style={{ fill: textColor }} fill="currentColor" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" 
                         width="100px" height="100px" viewBox="0 0 38.022 38.022">
@@ -167,7 +167,7 @@ const Goals = () => {
                       <h3>Вивчаю в рамках освіти</h3>
                     </div>
                     </Link>
-                    <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/speaking">
+                    <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/lesson">
                     <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }}>
                     <svg style={{ fill: textColor}} fill="currentColor" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" 
                         width="100px" height="100px" viewBox="0 0 34 34">
