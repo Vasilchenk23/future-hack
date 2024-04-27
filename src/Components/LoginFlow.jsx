@@ -8,7 +8,8 @@ const LoginFlow = () => {
     const handleSubmit = async () => {
         const userData = {
             name: username,
-            language_lvl: 0
+            language_lvl: 0,
+            chat: "string"
         };
 
         try {
