@@ -14,6 +14,26 @@ const Lesson = () => {
   const [backgroundColor, setBackgroundColor] = useState('#ffffff'); 
   const [backgroundColor1, setBackgroundColor1] = useState('#ffffff'); 
 
+  const getFile = async () => {
+    try {
+        const ctx = new AudioContext();
+            fetch("https://hackathon.ostolex.com/user/file/get?filename=speech.mp3")
+            .then(data => data.arrayBuffer())
+            .then(arrayBuffer => {
+                console.log(arrayBuffer)
+                return ctx.decodeAudioData(arrayBuffer)
+            })
+            .then(decodedAudio => {
+                const playSound = ctx.createBufferSource();
+                playSound.buffer = decodedAudio;
+                playSound.connect(ctx.destination);
+                playSound.start(ctx.currentTime);
+            })
+    } catch (error) {
+        console.error('Ошибка при выполнении запроса:', error);
+    }
+  }
+
   useEffect(() => {
       setBackgroundColor1('#000000');
   }, []);
@@ -123,6 +143,7 @@ const Lesson = () => {
                       </g>
                   </g>
               </svg>
+              <button onClick={getFile}>Воспроизвести</button>
               {/* <VoiceRecognitionAnimation /> */}
               {isRecording}
               {/* </Link> */}

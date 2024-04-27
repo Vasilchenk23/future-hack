@@ -38,8 +38,8 @@ const Goals = () => {
                   'Content-Type': 'application/json'
               },
               body: JSON.stringify({
-                  "user_id": 0,
-                  "goal_id": 0
+                  "user_id": 1,
+                  "goal_id": 1
               })
           });
   
