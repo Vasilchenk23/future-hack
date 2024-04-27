@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Modal from "./Modal";
-import VoiceRecognitionAnimation from "./VoiceRecognitionAnimation";
+// import VoiceRecognitionAnimation from "./VoiceRecognitionAnimation";
 
 const Lesson = () => {
   const [isRecording, setIsRecording] = useState(false);
@@ -15,57 +15,77 @@ const Lesson = () => {
   const [backgroundColor1, setBackgroundColor1] = useState('#ffffff'); 
 
   useEffect(() => {
-    setBackgroundColor1('#000000');
+      setBackgroundColor1('#000000');
   }, []);
 
   const openModal = () => {
-    setModalOpen(true);
+      setModalOpen(true);
   };
 
   const closeModal = () => {
-    setModalOpen(false);
+      setModalOpen(false);
   };
 
   const applyChanges = (changes) => {
-    setTextColor(changes.textColor);
-    setBackgroundColor(changes.backgroundColor);
-    
-    const blocks = document.querySelectorAll(".white-block-lesson, .black-block-lesson"); 
-    blocks.forEach((block) => {
-      block.style.backgroundColor = changes.backgroundColor;
-    });
+      setTextColor(changes.textColor);
+      setBackgroundColor(changes.backgroundColor);
+      
+      const blocks = document.querySelectorAll(".white-block-lesson, .black-block-lesson"); 
+      blocks.forEach((block) => {
+          block.style.backgroundColor = changes.backgroundColor;
+      });
   };
 
   const startRecording = () => {
-    setIsRecording(true);
-    navigator.mediaDevices.getUserMedia({ audio: true })
-      .then(stream => {
-        mediaRecorder.current = new MediaRecorder(stream);
-        mediaRecorder.current.ondataavailable = event => {
-          audioChunks.current.push(event.data);
-        };
-        mediaRecorder.current.start();
-      })
-      .catch(error => console.error('Error accessing media devices.', error));
+      setIsRecording(true);
+      navigator.mediaDevices.getUserMedia({ audio: true })
+          .then(stream => {
+              mediaRecorder.current = new MediaRecorder(stream);
+              mediaRecorder.current.ondataavailable = event => {
+                  audioChunks.current.push(event.data);
+              };
+              mediaRecorder.current.start();
+          })
+          .catch(error => console.error('Error accessing media devices.', error));
   };
 
-  const stopRecording = () => {
-    setIsRecording(false);
-    mediaRecorder.current.stop();
+  const stopRecording = async () => {
+      setIsRecording(false);
+      mediaRecorder.current.stop();
+
+      if (audioChunks.current.length > 0) {
+          const audioBlob = new Blob(audioChunks.current, { type: 'audio/mp3' });
+            const audioUrl = URL.createObjectURL(audioBlob);
+            const audio = new Audio(audioUrl);
+            await audio.play();
+
+          try {
+              const formData = new FormData();
+              formData.append('file', audioBlob);
+
+              const response = await fetch('https://hackathon.ostolex.com/user/file/upload?id=3', {
+                  method: 'POST',
+                  body: formData
+              });
+
+              if (response.ok) {
+                  console.log('Аудиофайл успешно загружен на сервер');
+              } else {
+                  console.error('Ошибка при загрузке аудиофайла на сервер:', response.statusText);
+              }
+          } catch (error) {
+              console.error('Ошибка при выполнении запроса:', error);
+          }
+
+          audioChunks.current = [];
+      }
   };
 
   useEffect(() => {
-    if (!isRecording && audioChunks.current.length > 0) {
-      const audioBlob = new Blob(audioChunks.current, { type: 'audio/mpeg-3' });
-      const audioUrl = URL.createObjectURL(audioBlob);
-      const link = document.createElement('a');
-      link.href = audioUrl;
-      link.download = 'recorded_audio.mp3';
-      document.body.appendChild(link);
-      link.click();
-      URL.revokeObjectURL(audioUrl);
-      audioChunks.current = [];
-    }
+      if (!isRecording && audioChunks.current.length > 0) {
+          // Остановить запись и отправить аудиофайл на сервер
+          stopRecording();
+      }
   }, [isRecording]);
 
  
@@ -103,7 +123,7 @@ const Lesson = () => {
                       </g>
                   </g>
               </svg>
-              <VoiceRecognitionAnimation />
+              {/* <VoiceRecognitionAnimation /> */}
               {isRecording}
               {/* </Link> */}
               {/* <Link to="/finish" style={{color: "green"}}>gg</Link> */}

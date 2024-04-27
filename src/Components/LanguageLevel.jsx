@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Modal from "./Modal";
 
-const LanguageLevel = () => {
+const LanguageLevel = ({ username }) => {
     const [modalOpen, setModalOpen] = useState(false);
     const [fontSize, setFontSize] = useState(16); 
     const [textColor, setTextColor] = useState('#000000');
@@ -27,25 +27,27 @@ const LanguageLevel = () => {
       });
     };
 
-    const handleButtonClick = async () => {
+    const handleBlockClick = async (level) => {
         try {
-            const response = await fetch('https://hackathon.ostolex.com/user/language', {
+            const response = await fetch(`https://hackathon.ostolex.com/user/user_lang?id=${10}`, {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    language_lvl: 4
+                    name: '',
+                    language_lvl: level
                 })
             });
     
             const data = await response.json();
-            console.log('Данные успешно отправлены', data);
+            console.log('Data sent successfully', data);
         } catch (error) {
-            console.error('Ошибка при отправке данных:', error.message);
+            console.error('Error sending data:', error.message);
         }
-    };    
+    };   
+
     return(
         <>
             <div className="main" style={{ color: textColor, fontSize: `${fontSize}px`, backgroundColor: backgroundColor }}>
@@ -63,7 +65,6 @@ const LanguageLevel = () => {
                         </Link>
                     </div>
                     <h1 className="item-text-h1-level">Якій в тебе рівень англійської?</h1>
-                    <button onClick={handleButtonClick}></button>
                     <svg className="logo-level" width="160" height="160" viewBox="0 0 160 160" stroke="currentColor" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 26.6667C0 11.9391 11.9391 0 26.6667 0H133.333C148.061 0 160 11.9391 160 26.6667V133.333C160 148.061 148.061 160 133.333 160H26.6667C11.9391 160 0 148.061 0 133.333V26.6667Z" />
                         <path d="M59.5417 94.1632H60.8733V101.333H56.8785C52.3715 101.333 49.8108 98.875 49.8108 94.2656V85.0469H35.9826V101.333H28.0955V62.4097H35.9826V78.0816H42.6406L52.0642 62.4097H60.7708L50.6302 78.0816H57.6979V92.3194C57.6979 93.4462 58.4149 94.1632 59.5417 94.1632Z" style={{ fill: backgroundColor}}/>
@@ -72,37 +73,37 @@ const LanguageLevel = () => {
                 </div>
                 <div className="black-block-level-english" style={{ backgroundColor: textColor}}>
                     <Link to="/goals">
-                        <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }}>
+                        <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }} onClick={() => handleBlockClick(1)}>
                             <p className="p-number" style={{ color: backgroundColor, backgroundColor: textColor, display:'flex', width:'50px', textAlign:'center', justifyContent:'center', alignItems:'center', borderRadius:'30px',   }}>1</p>
                             <p  className="item-text-level">Знаю що London is the capital of the Great Britan</p>
                         </div>
                     </Link>
                     <Link to="/goals">
-                        <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }}>
+                        <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }} onClick={() => handleBlockClick(2)}>
                             <p className="p-number" style={{ color: backgroundColor, backgroundColor: textColor, display:'flex', width:'50px', textAlign:'center', justifyContent:'center', alignItems:'center', borderRadius:'30px'  }}>2</p>
                             <p className="item-text-level">Можу замовити каву. Але тільки small</p>
                         </div>
                     </Link>
                     <Link to="/goals">
-                        <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }}>
+                        <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }} onClick={() => handleBlockClick(3)}>
                             <p className="p-number" style={{ color: backgroundColor, backgroundColor: textColor, display:'flex', width:'50px', textAlign:'center', justifyContent:'center', alignItems:'center', borderRadius:'30px'  }}>3</p>
                             <p className="item-text-level">Розповім як пройшов мій день, якщо він був good</p>
                         </div>
                     </Link>
                     <Link to="/goals">
-                        <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }}>
+                        <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }} onClick={() => handleBlockClick(4)}>
                             <p className="p-number-4" style={{ color: backgroundColor, backgroundColor: textColor, display:'flex', width:'60px', textAlign:'center', justifyContent:'center', alignItems:'center', borderRadius:'30px'  }}>4</p>
                             <p className="item-text-level">Можу вести бесіду на різноманітні теми. Пишу твіти без помилок (майже)</p>
                         </div>
                     </Link>
                    <Link to="/goals">
-                    <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }}>
+                    <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }} onClick={() => handleBlockClick(5)}>
                             <p className="p-number" style={{ color: backgroundColor, backgroundColor: textColor, display:'flex', width:'55px', textAlign:'center', justifyContent:'center', alignItems:'center', borderRadius:'30px'  }}>5</p>
                             <p className="item-text-level">Можу використовувати складну мову. Дивлюсь серіали без субтитрів</p>
                         </div>
                    </Link>
                     <Link to="/goals">
-                        <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }}>
+                        <div className="item-block" style={{ color: textColor, backgroundColor: backgroundColor }} onClick={() => handleBlockClick(6)}>
                             <p className="p-number" style={{ color: backgroundColor, backgroundColor: textColor, display:'flex', width:'50px', textAlign:'center', justifyContent:'center', alignItems:'center', borderRadius:'30px'  }}>6</p>
                             <p className="item-text-level">Розмовляю як носій. Dobry den, everybody</p>
                         </div>

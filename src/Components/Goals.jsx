@@ -29,14 +29,26 @@ const Goals = () => {
       });
     };
 
-    const handleSubmit = async () => {
+    const handleBlockClick = async (level) => {
       try {
-        await axios.post('https://back-opencv-nodejs-production.up.railway.app/api/send-email');
-        alert('Електронний лист успішно відправлено! 😊');
+          const response = await fetch(`https://hackathon.ostolex.com/user/utg`, {
+              method: 'POST',
+              headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                  "user_id": 0,
+                  "goal_id": 0
+              })
+          });
+  
+          const data = await response.json();
+          console.log('Данные успешно отправлены', data);
       } catch (error) {
-        alert('Не вдалося відправити лист. Будь ласка, спробуйте знову. 😞');
+          console.error('Ошибка при отправке данных:', error.message);
       }
-    };
+  };   
     return(
         <>
         <div className="main" style={{  color: textColor, fontSize: `${fontSize}px` }}>
@@ -53,7 +65,7 @@ const Goals = () => {
                     </svg>
                     </Link>
                 </div>
-                <h1 className="item-text-h1-goals" onClick={handleSubmit} >Для чого ти вивчаєш англійську?</h1>
+                <h1 className="item-text-h1-goals" >Для чого ти вивчаєш англійську?</h1>
                 <svg className="logo-goal" width="160" height="160" viewBox="0 0 160 160" stroke="currentColor" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 26.6667C0 11.9391 11.9391 0 26.6667 0H133.333C148.061 0 160 11.9391 160 26.6667V133.333C160 148.061 148.061 160 133.333 160H26.6667C11.9391 160 0 148.061 0 133.333V26.6667Z" />
                   <path d="M59.5417 94.1632H60.8733V101.333H56.8785C52.3715 101.333 49.8108 98.875 49.8108 94.2656V85.0469H35.9826V101.333H28.0955V62.4097H35.9826V78.0816H42.6406L52.0642 62.4097H60.7708L50.6302 78.0816H57.6979V92.3194C57.6979 93.4462 58.4149 94.1632 59.5417 94.1632Z" style={{ fill: backgroundColor}}/>
@@ -62,7 +74,7 @@ const Goals = () => {
             </div>
             <div className="black-block-goals" style={{ backgroundColor: textColor}}>
                   <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/lesson" >
-                    <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }}>
+                    <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }} onClick={handleBlockClick}>
                     <svg style={{ fill: textColor}} fill="currentColor" stoke="currentColor" width="100px" height="100px" viewBox="0 0 36 36" version="1.1"  preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
                       <title>plane-solid</title>
                       <path class="clr-i-solid clr-i-solid-path-1" d="M6.25,11.5,12,13.16l6.32-4.59-9.07.26A.52.52,0,0,0,9,8.91L6.13,10.56A.51.51,0,0,0,6.25,11.5Z"></path><path class="clr-i-solid clr-i-solid-path-2" d="M34.52,6.36,28.22,5a3.78,3.78,0,0,0-3.07.67L6.12,19.5l-4.57-.2a1.25,1.25,0,0,0-.83,2.22l4.45,3.53a.55.55,0,0,0,.53.09c1.27-.49,6-3,11.59-6.07l1.12,11.51a.55.55,0,0,0,.9.37l2.5-2.08a.76.76,0,0,0,.26-.45l2.37-13.29c4-2.22,7.82-4.37,10.51-5.89A1.55,1.55,0,0,0,34.52,6.36Z"></path>
@@ -73,7 +85,7 @@ const Goals = () => {
                     </div>
                   </Link>
                   <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/lesson">
-                    <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }}>
+                    <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }} onClick={handleBlockClick}>
                     <svg  style={{ fill: textColor}} fill="currentColor" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
                       width="100px" height="100px" viewBox="0 0 256 246" enable-background="new 0 0 256 246">
                       <path d="M254,150.588v93.343H53.545v-31.916h64.591v-28.727h60.744v-32.7H254z M113.175,18.875c0,9.282,7.524,16.806,16.806,16.806
@@ -94,7 +106,7 @@ const Goals = () => {
                     </div>
                   </Link>
                     <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/lesson">
-                    <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }}>
+                    <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }} onClick={handleBlockClick}>
                     <svg height="100px" width="100px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" style={{ fill: textColor}}  fill="currentColor"
                           viewBox="0 0 512 512">
                         <style type="text/css">
@@ -144,7 +156,7 @@ const Goals = () => {
                     </div>
                     </Link>
                     <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/lesson">
-                    <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }}>
+                    <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }} onClick={handleBlockClick}>
                         <svg fill="currentColor" style={{ fill: textColor }} width="100px" height="100px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19.73,16.663A3.467,3.467,0,0,0,20.5,14.5a3.5,3.5,0,0,0-7,0,3.467,3.467,0,0,0,.77,2.163A6.04,6.04,0,0,0,12,18.69a6.04,6.04,0,0,0-2.27-2.027A3.467,3.467,0,0,0,10.5,14.5a3.5,3.5,0,0,0-7,0,3.467,3.467,0,0,0,.77,2.163A6,6,0,0,0,1,22a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1A6,6,0,0,0,19.73,16.663ZM7,13a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,7,13ZM3.126,21a4,4,0,0,1,7.748,0ZM17,13a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,17,13Zm-3.874,8a4,4,0,0,1,7.748,0ZM6,2V8A1,1,0,0,0,7,9H9.865l1.367,1.641a1,1,0,0,0,1.536,0L14.135,9H17a1,1,0,0,0,1-1V2a1,1,0,0,0-1-1H7A1,1,0,0,0,6,2ZM8,3h8V7H13.667a1,1,0,0,0-.769.359L12,8.438l-.9-1.079A1,1,0,0,0,10.333,7H8Z"/></svg>
                         <p className="p-page"  style={{ color: backgroundColor, backgroundColor: textColor, display:'flex', width:'50px', height:'50px', textAlign:'center', justifyContent:'center', alignItems:'center', borderRadius:'30px', margin:"-90px 0px 70px 20px"   }}>4</p>
@@ -152,7 +164,7 @@ const Goals = () => {
                     </div>
                     </Link>
                     <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/lesson">
-                    <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }}>
+                    <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }} onClick={handleBlockClick}>
                     <svg style={{ fill: textColor }} fill="currentColor" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" 
                         width="100px" height="100px" viewBox="0 0 38.022 38.022">
                       <g>
@@ -168,7 +180,7 @@ const Goals = () => {
                     </div>
                     </Link>
                     <Link style={{ color: textColor, fontSize: `${fontSize}px` }} to="/lesson">
-                    <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }}>
+                    <div className="item-div" style={{ color: textColor, fontSize: `${fontSize}px` }} onClick={handleBlockClick}>
                     <svg style={{ fill: textColor}} fill="currentColor" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" 
                         width="100px" height="100px" viewBox="0 0 34 34">
                       <g>
