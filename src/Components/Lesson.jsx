@@ -77,7 +77,7 @@ const Lesson = () => {
           const audioBlob = new Blob(audioChunks.current, { type: 'audio/mp3' });
             const audioUrl = URL.createObjectURL(audioBlob);
             const audio = new Audio(audioUrl);
-            await audio.play();
+            // await audio.play();
 
           try {
               const formData = new FormData();
@@ -143,7 +143,7 @@ const Lesson = () => {
                       </g>
                   </g>
               </svg>
-              <button onClick={getFile}>Воспроизвести</button>
+              <button style={{width:'200px', height:'60px', color: textColor, backgroundColor: backgroundColor, border:'none', borderRadius:'20px'}} onClick={getFile}>Відтворити відповідь</button>
               {/* <VoiceRecognitionAnimation /> */}
               {isRecording}
               {/* </Link> */}
